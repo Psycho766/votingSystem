@@ -16,5 +16,13 @@ namespace SHS_Automated_Voting_System
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+
+        }
     }
 }

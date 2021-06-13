@@ -1,0 +1,16 @@
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\bin\Debug\SHS Automated Voting System.exe.config
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\bin\Debug\SHS Automated Voting System.exe
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\bin\Debug\SHS Automated Voting System.pdb
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\bin\Debug\MetroFramework.Design.dll
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\bin\Debug\MetroFramework.dll
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\bin\Debug\MetroFramework.Fonts.dll
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\bin\Debug\Siticone.Desktop.UI.dll
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.csproj.AssemblyReference.cache
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS_Automated_Voting_System.Dashboard.resources
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS_Automated_Voting_System.Form1.resources
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS_Automated_Voting_System.Properties.Resources.resources
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.csproj.GenerateResource.cache
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.csproj.CoreCompileInputs.cache
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.csproj.CopyComplete
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.exe
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.pdb
