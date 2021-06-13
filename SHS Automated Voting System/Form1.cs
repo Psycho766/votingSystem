@@ -44,7 +44,7 @@ namespace SHS_Automated_Voting_System
 
         private void tbPassEnter(object sender, EventArgs e)
         {
-            if (tbPass.Text.Equals(@"*****"))
+            if (tbPass.Text.Equals(@"Password"))
             {
                 tbPass.Text = "";
             }
@@ -54,7 +54,7 @@ namespace SHS_Automated_Voting_System
         {
             if (tbPass.Text.Equals(""))
             {
-                tbPass.Text = @"*****";
+                tbPass.Text = @"Password";
             }
         }
 
@@ -77,6 +77,11 @@ namespace SHS_Automated_Voting_System
             {
                 MessageBox.Show("INVALID USERNAME/PASSWORD");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
