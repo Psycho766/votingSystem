@@ -30,8 +30,8 @@ namespace SHS_Automated_Voting_System
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,19 +48,19 @@ namespace SHS_Automated_Voting_System
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tbUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbUser.Location = new System.Drawing.Point(102, 230);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(155, 22);
+            this.tbUser.TabIndex = 1;
             // 
-            // textBox2
+            // tbPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(155, 22);
-            this.textBox2.TabIndex = 2;
+            this.tbPass.Location = new System.Drawing.Point(102, 292);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.Size = new System.Drawing.Size(155, 22);
+            this.tbPass.TabIndex = 2;
             // 
             // label1
             // 
@@ -96,8 +96,8 @@ namespace SHS_Automated_Voting_System
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPass);
+            this.Controls.Add(this.tbUser);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -112,8 +112,8 @@ namespace SHS_Automated_Voting_System
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
