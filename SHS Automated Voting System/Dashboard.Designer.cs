@@ -63,6 +63,7 @@ namespace SHS_Automated_Voting_System
             this.button9 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnVoters = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -127,7 +128,7 @@ namespace SHS_Automated_Voting_System
             this.metroTabControl1.ItemSize = new System.Drawing.Size(150, 40);
             this.metroTabControl1.Location = new System.Drawing.Point(0, 51);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(854, 542);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroTabControl1.TabIndex = 1;
@@ -414,6 +415,7 @@ namespace SHS_Automated_Voting_System
             // 
             // metroTabPage4
             // 
+            this.metroTabPage4.Controls.Add(this.btnVoters);
             this.metroTabPage4.Controls.Add(this.panel8);
             this.metroTabPage4.Controls.Add(this.panel9);
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
@@ -494,6 +496,21 @@ namespace SHS_Automated_Voting_System
             this.label5.TabIndex = 0;
             this.label5.Text = "Admin";
             // 
+            // btnVoters
+            // 
+            this.btnVoters.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnVoters.FlatAppearance.BorderSize = 0;
+            this.btnVoters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoters.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoters.ForeColor = System.Drawing.Color.White;
+            this.btnVoters.Location = new System.Drawing.Point(681, 31);
+            this.btnVoters.Name = "btnVoters";
+            this.btnVoters.Size = new System.Drawing.Size(144, 35);
+            this.btnVoters.TabIndex = 9;
+            this.btnVoters.Text = "Add Voters";
+            this.btnVoters.UseVisualStyleBackColor = false;
+            this.btnVoters.Click += new System.EventHandler(this.btnVoters_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -564,5 +581,6 @@ namespace SHS_Automated_Voting_System
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnVoters;
     }
 }

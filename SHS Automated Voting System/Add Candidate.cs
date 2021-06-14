@@ -49,7 +49,7 @@ namespace SHS_Automated_Voting_System
             else
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Candidates values(@firstName,@middleName,@lastName,@partylist,@position,@strand,@year,@electionID)", con);
+                SqlCommand cmd = new SqlCommand("insert into Candidates values(@firstName,@middleName,@lastName,@partylist,@position,@strand,@year,@electionID,@vote)", con);
                 cmd.Parameters.AddWithValue("@firstName", tbFirst.Text.ToLower());
                 cmd.Parameters.AddWithValue("@middleName", tbMiddle.Text.ToLower());
                 cmd.Parameters.AddWithValue("@lastName", tbLast.Text.ToLower());
@@ -58,11 +58,19 @@ namespace SHS_Automated_Voting_System
                 cmd.Parameters.AddWithValue("@strand", cbStrand.Text);
                 cmd.Parameters.AddWithValue("@year", tbYear.Text);
                 cmd.Parameters.AddWithValue("@electionID", Int32.Parse(id));
+                cmd.Parameters.AddWithValue("@vote", 0);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Added Sucessfully!");
 
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Close();
         }
     }
 }

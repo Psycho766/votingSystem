@@ -209,6 +209,7 @@ namespace SHS_Automated_Voting_System
             this.button3.TabIndex = 13;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tbMiddle
             // 
