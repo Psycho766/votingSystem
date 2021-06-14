@@ -48,5 +48,12 @@ namespace SHS_Automated_Voting_System
             ce.Show();
             this.Hide();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Add_Candidate ac = new Add_Candidate();
+            ac.Show();
+            this.Hide();
+        }
     }
 }

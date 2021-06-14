@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Candidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Candidate.Designer.cs">
+      <DependentUpon>Add Candidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create Election.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add Candidate.resx">
+      <DependentUpon>Add Candidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create Election.resx">
       <DependentUpon>Create Election.cs</DependentUpon>
     </EmbeddedResource>

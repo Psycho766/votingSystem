@@ -130,9 +130,9 @@ namespace SHS_Automated_Voting_System
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(117, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 24);
+            this.label2.Size = new System.Drawing.Size(135, 24);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Election Title:";
+            this.label2.Text = "Election Year:";
             // 
             // btnCreate
             // 

@@ -41,6 +41,7 @@ namespace SHS_Automated_Voting_System
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.button10 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@ namespace SHS_Automated_Voting_System
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -61,7 +63,6 @@ namespace SHS_Automated_Voting_System
             this.button9 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -126,7 +127,7 @@ namespace SHS_Automated_Voting_System
             this.metroTabControl1.ItemSize = new System.Drawing.Size(150, 40);
             this.metroTabControl1.Location = new System.Drawing.Point(0, 51);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(854, 542);
             this.metroTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.metroTabControl1.TabIndex = 1;
@@ -232,6 +233,21 @@ namespace SHS_Automated_Voting_System
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.DarkCyan;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(681, 31);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(144, 35);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Create Election";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
+            // 
             // panel4
             // 
             this.panel4.Location = new System.Drawing.Point(198, 96);
@@ -300,6 +316,7 @@ namespace SHS_Automated_Voting_System
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.button11);
             this.metroTabPage3.Controls.Add(this.panel6);
             this.metroTabPage3.Controls.Add(this.panel7);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
@@ -313,6 +330,21 @@ namespace SHS_Automated_Voting_System
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DarkCyan;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(680, 31);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(144, 35);
+            this.button11.TabIndex = 8;
+            this.button11.Text = "Add Candidates";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // panel6
             // 
@@ -462,21 +494,6 @@ namespace SHS_Automated_Voting_System
             this.label5.TabIndex = 0;
             this.label5.Text = "Admin";
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.DarkCyan;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(681, 31);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(144, 35);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Create Election";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click_1);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -546,5 +563,6 @@ namespace SHS_Automated_Voting_System
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

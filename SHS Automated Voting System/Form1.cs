@@ -66,7 +66,7 @@ namespace SHS_Automated_Voting_System
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
+            
             if (dt.Rows.Count == 1)
             {
                 Dashboard d = new Dashboard();
