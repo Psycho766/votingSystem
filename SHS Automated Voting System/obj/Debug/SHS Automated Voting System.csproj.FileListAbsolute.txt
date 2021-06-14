@@ -14,3 +14,4 @@ D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS
 D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.csproj.CopyComplete
 D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.exe
 D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS Automated Voting System.pdb
+D:\brian\Documents\GitHub\votingSystem\SHS Automated Voting System\obj\Debug\SHS_Automated_Voting_System.Create_Election.resources

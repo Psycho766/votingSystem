@@ -32,6 +32,21 @@ namespace SHS_Automated_Voting_System
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            Create_Election ce = new Create_Election();
+            ce.Show();
+            this.Hide();
+        }
     }
 }
