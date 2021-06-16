@@ -92,6 +92,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SHS_Automated_Voting_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SHS_Automated_Voting_SystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SHS_Automated_Voting_SystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SHS_Automated_Voting_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Voter Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +154,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SHS_Automated_Voting_SystemDataSet.xsc">
+      <DependentUpon>SHS_Automated_Voting_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SHS_Automated_Voting_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SHS_Automated_Voting_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SHS_Automated_Voting_SystemDataSet.xss">
+      <DependentUpon>SHS_Automated_Voting_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SHS_Automated_Voting_SystemDataSet1.xsc">
+      <DependentUpon>SHS_Automated_Voting_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SHS_Automated_Voting_SystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SHS_Automated_Voting_SystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SHS_Automated_Voting_SystemDataSet1.xss">
+      <DependentUpon>SHS_Automated_Voting_SystemDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

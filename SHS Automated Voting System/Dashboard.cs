@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,38 @@ namespace SHS_Automated_Voting_System
             Voter_Login vl = new Voter_Login();
             vl.Show();
             this.Hide();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=PSYCHO\\SQLEXPRESS;Initial Catalog=SHS Automated Voting System;Integrated Security=True");
+            
+            con.Open();
+            SqlCommand election = new SqlCommand("select * from elections", con);
+            SqlDataAdapter da = new SqlDataAdapter(election);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgvElect.DataSource = dt;
+            con.Close();
+
+
+            con.Open();
+            SqlCommand voter = new SqlCommand("select * from voters", con);
+            SqlDataAdapter da1 = new SqlDataAdapter(voter);
+            DataTable dt1 = new DataTable();
+            da1.Fill(dt1);
+            dgvVoters.DataSource = dt1;
+            con.Close();
+
+
+
+            con.Open();
+            SqlCommand candidates = new SqlCommand("select * from candidates", con);
+            SqlDataAdapter da2 = new SqlDataAdapter(candidates);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            dgvCandidates.DataSource = dt2;
+            con.Close();
         }
     }
 }
