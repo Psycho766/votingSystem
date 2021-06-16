@@ -29,17 +29,17 @@ namespace SHS_Automated_Voting_System
             con.Open();
 
 
-            SqlCommand el = new SqlCommand("select electionID from Elections",con);
+            SqlCommand el = new SqlCommand("select electionID from Elections where ElectionYear = '" + tbYear.Text.Trim() + "'",con);
             SqlDataReader reader = el.ExecuteReader();
-            string id = "";
+            int id = 0;
             while (reader.Read())
             {
-                id = reader[0].ToString();
+                id = reader.GetInt32(0);
             }
 
             con.Close();
 
-
+            
 
 
             if (tbFirst.Text == "" || tbMiddle.Text == "" || tbLast.Text == "")
@@ -57,13 +57,14 @@ namespace SHS_Automated_Voting_System
                 cmd.Parameters.AddWithValue("@position", cbPosition.Text);
                 cmd.Parameters.AddWithValue("@strand", cbStrand.Text);
                 cmd.Parameters.AddWithValue("@year", tbYear.Text);
-                cmd.Parameters.AddWithValue("@electionID", Int32.Parse(id));
+                cmd.Parameters.AddWithValue("@electionID", id);
                 cmd.Parameters.AddWithValue("@vote", 0);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Added Sucessfully!");
 
             }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
