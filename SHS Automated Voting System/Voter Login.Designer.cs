@@ -46,6 +46,7 @@ namespace SHS_Automated_Voting_System
             this.tbNo.Name = "tbNo";
             this.tbNo.Size = new System.Drawing.Size(230, 30);
             this.tbNo.TabIndex = 11;
+            this.tbNo.TextChanged += new System.EventHandler(this.tbNo_TextChanged);
             // 
             // label2
             // 
@@ -127,11 +128,11 @@ namespace SHS_Automated_Voting_System
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox tbNo;
     }
 }

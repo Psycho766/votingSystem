@@ -37,10 +37,11 @@ namespace SHS_Automated_Voting_System
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("insert into Voters values(@studentNo,@name,@strand)", con);
+                SqlCommand cmd = new SqlCommand("insert into Voters values(@studentNo,@name,@strand,@status)", con);
                 cmd.Parameters.AddWithValue("@studentNo", tbNo.Text);
                 cmd.Parameters.AddWithValue("@name", tbName.Text.Trim());
                 cmd.Parameters.AddWithValue("@strand", tbStrand.Text);
+                cmd.Parameters.AddWithValue("@status", " ");
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Added Sucessfully!");

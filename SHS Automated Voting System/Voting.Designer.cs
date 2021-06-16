@@ -34,7 +34,7 @@ namespace SHS_Automated_Voting_System
             this.rbRep2 = new System.Windows.Forms.RadioButton();
             this.rbRep1 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.rbAu2 = new System.Windows.Forms.RadioButton();
             this.rbAu1 = new System.Windows.Forms.RadioButton();
@@ -77,7 +77,7 @@ namespace SHS_Automated_Voting_System
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnSubmit);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
@@ -134,18 +134,19 @@ namespace SHS_Automated_Voting_System
             this.label8.TabIndex = 3;
             this.label8.Text = "Representative";
             // 
-            // button2
+            // btnSubmit
             // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(320, 567);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 44);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "SUBMIT VOTE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSubmit.BackColor = System.Drawing.Color.Teal;
+            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(320, 567);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(116, 44);
+            this.btnSubmit.TabIndex = 3;
+            this.btnSubmit.Text = "SUBMIT VOTE";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // panel8
             // 
@@ -490,7 +491,7 @@ namespace SHS_Automated_Voting_System
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;

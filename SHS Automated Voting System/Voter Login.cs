@@ -22,25 +22,51 @@ namespace SHS_Automated_Voting_System
         {
             SqlConnection con = new SqlConnection("Data Source=PSYCHO\\SQLEXPRESS;Initial Catalog=SHS Automated Voting System;Integrated Security=True");
             con.Open();
+            SqlDataReader reader;
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Voters where studentNo = '" + tbNo.Text.Trim() + "'", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-
-            if (dt.Rows.Count == 1)
+            SqlCommand status = new SqlCommand("select status from Voters where studentNo = '" + tbNo.Text.Trim() + "'", con);
+            reader = status.ExecuteReader();
+            string stat = "";
+            while (reader.Read())
             {
-                Voting v = new Voting();
-                v.Show();
-                this.Hide();
+                stat = reader[0].ToString();
+            }
+            con.Close();
+
+            if (stat != "voted")
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Voters where studentNo = '" + tbNo.Text.Trim() + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+
+                if (dt.Rows.Count == 1)
+                {
+                    Voting v = new Voting(tbNo.Text);
+                    v.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Not Registered!");
+                }
             }
             else
             {
-                MessageBox.Show("Not Registered!");
+                MessageBox.Show("Already Voted!");
             }
 
 
+            
+
+
         }
+
+        public void tbNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
