@@ -55,9 +55,11 @@ namespace SHS_Automated_Voting_System
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(271, 28);
+            this.pictureBox1.BackgroundImage = global::SHS_Automated_Voting_System.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(272, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 145);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 

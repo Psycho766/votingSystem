@@ -35,6 +35,7 @@ namespace SHS_Automated_Voting_System
             this.button1 = new System.Windows.Forms.Button();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.dgvResult = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@ namespace SHS_Automated_Voting_System
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.dgvCandidates = new System.Windows.Forms.DataGridView();
             this.button11 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -56,6 +58,7 @@ namespace SHS_Automated_Voting_System
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.dgvVoters = new System.Windows.Forms.DataGridView();
             this.btnVoters = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -68,12 +71,10 @@ namespace SHS_Automated_Voting_System
             this.sHS_Automated_Voting_SystemDataSet1 = new SHS_Automated_Voting_System.SHS_Automated_Voting_SystemDataSet1();
             this.electionsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.electionsTableAdapter1 = new SHS_Automated_Voting_System.SHS_Automated_Voting_SystemDataSet1TableAdapters.ElectionsTableAdapter();
-            this.dgvCandidates = new System.Windows.Forms.DataGridView();
-            this.dgvVoters = new System.Windows.Forms.DataGridView();
-            this.dgvResult = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.dgvElection.SuspendLayout();
@@ -81,18 +82,17 @@ namespace SHS_Automated_Voting_System
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidates)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.metroTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVoters)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sHS_Automated_Voting_SystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.electionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sHS_Automated_Voting_SystemDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.electionsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidates)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVoters)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -165,6 +165,16 @@ namespace SHS_Automated_Voting_System
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // dgvResult
+            // 
+            this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResult.Location = new System.Drawing.Point(209, 122);
+            this.dgvResult.Name = "dgvResult";
+            this.dgvResult.RowHeadersWidth = 51;
+            this.dgvResult.RowTemplate.Height = 24;
+            this.dgvResult.Size = new System.Drawing.Size(629, 349);
+            this.dgvResult.TabIndex = 9;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -190,6 +200,7 @@ namespace SHS_Automated_Voting_System
             this.button3.TabIndex = 5;
             this.button3.Text = "Logout";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -208,6 +219,10 @@ namespace SHS_Automated_Voting_System
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::SHS_Automated_Voting_System.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.ErrorImage = global::SHS_Automated_Voting_System.Properties.Resources.logo;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(37, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 125);
@@ -293,6 +308,7 @@ namespace SHS_Automated_Voting_System
             this.button4.TabIndex = 5;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -307,9 +323,12 @@ namespace SHS_Automated_Voting_System
             this.button5.TabIndex = 4;
             this.button5.Text = "Start Election";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::SHS_Automated_Voting_System.Properties.Resources.logo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(37, 31);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(125, 125);
@@ -343,6 +362,16 @@ namespace SHS_Automated_Voting_System
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // dgvCandidates
+            // 
+            this.dgvCandidates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCandidates.Location = new System.Drawing.Point(209, 122);
+            this.dgvCandidates.Name = "dgvCandidates";
+            this.dgvCandidates.RowHeadersWidth = 51;
+            this.dgvCandidates.RowTemplate.Height = 24;
+            this.dgvCandidates.Size = new System.Drawing.Size(629, 349);
+            this.dgvCandidates.TabIndex = 9;
             // 
             // button11
             // 
@@ -384,6 +413,7 @@ namespace SHS_Automated_Voting_System
             this.button6.TabIndex = 5;
             this.button6.Text = "Logout";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -398,9 +428,12 @@ namespace SHS_Automated_Voting_System
             this.button7.TabIndex = 4;
             this.button7.Text = "Start Election";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = global::SHS_Automated_Voting_System.Properties.Resources.logo;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(37, 31);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(125, 125);
@@ -434,6 +467,16 @@ namespace SHS_Automated_Voting_System
             this.metroTabPage4.VerticalScrollbarBarColor = true;
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.VerticalScrollbarSize = 10;
+            // 
+            // dgvVoters
+            // 
+            this.dgvVoters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVoters.Location = new System.Drawing.Point(209, 122);
+            this.dgvVoters.Name = "dgvVoters";
+            this.dgvVoters.RowHeadersWidth = 51;
+            this.dgvVoters.RowTemplate.Height = 24;
+            this.dgvVoters.Size = new System.Drawing.Size(629, 349);
+            this.dgvVoters.TabIndex = 10;
             // 
             // btnVoters
             // 
@@ -475,6 +518,7 @@ namespace SHS_Automated_Voting_System
             this.button8.TabIndex = 5;
             this.button8.Text = "Logout";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -489,9 +533,12 @@ namespace SHS_Automated_Voting_System
             this.button9.TabIndex = 4;
             this.button9.Text = "Start Election";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackgroundImage = global::SHS_Automated_Voting_System.Properties.Resources.logo;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(37, 31);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(125, 125);
@@ -537,36 +584,6 @@ namespace SHS_Automated_Voting_System
             // 
             this.electionsTableAdapter1.ClearBeforeFill = true;
             // 
-            // dgvCandidates
-            // 
-            this.dgvCandidates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCandidates.Location = new System.Drawing.Point(209, 122);
-            this.dgvCandidates.Name = "dgvCandidates";
-            this.dgvCandidates.RowHeadersWidth = 51;
-            this.dgvCandidates.RowTemplate.Height = 24;
-            this.dgvCandidates.Size = new System.Drawing.Size(629, 349);
-            this.dgvCandidates.TabIndex = 9;
-            // 
-            // dgvVoters
-            // 
-            this.dgvVoters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVoters.Location = new System.Drawing.Point(209, 122);
-            this.dgvVoters.Name = "dgvVoters";
-            this.dgvVoters.RowHeadersWidth = 51;
-            this.dgvVoters.RowTemplate.Height = 24;
-            this.dgvVoters.Size = new System.Drawing.Size(629, 349);
-            this.dgvVoters.TabIndex = 10;
-            // 
-            // dgvResult
-            // 
-            this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResult.Location = new System.Drawing.Point(209, 122);
-            this.dgvResult.Name = "dgvResult";
-            this.dgvResult.RowHeadersWidth = 51;
-            this.dgvResult.RowTemplate.Height = 24;
-            this.dgvResult.Size = new System.Drawing.Size(629, 349);
-            this.dgvResult.TabIndex = 9;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -583,6 +600,7 @@ namespace SHS_Automated_Voting_System
             this.panel1.PerformLayout();
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -592,10 +610,12 @@ namespace SHS_Automated_Voting_System
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidates)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.metroTabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVoters)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -603,9 +623,6 @@ namespace SHS_Automated_Voting_System
             ((System.ComponentModel.ISupportInitialize)(this.electionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sHS_Automated_Voting_SystemDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.electionsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidates)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVoters)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
             this.ResumeLayout(false);
 
         }
