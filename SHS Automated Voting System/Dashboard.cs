@@ -101,6 +101,19 @@ namespace SHS_Automated_Voting_System
             da2.Fill(dt2);
             dgvCandidates.DataSource = dt2;
             con.Close();
+
+
+
+
+            con.Open();
+            SqlCommand result = new SqlCommand("select * from candidates", con);
+            SqlDataAdapter da3 = new SqlDataAdapter(result);
+            DataTable dt3 = new DataTable();
+            da3.Fill(dt3);
+            dgvResult.DataSource = dt3;
+            con.Close();
+
+
         }
     }
 }
